@@ -11,12 +11,11 @@ $btn-box-shadow-width: 3px !default;
   border: 0;
 }
 
-
 /// Set box shadow to a button
 /// @access public
 /// @param {Color} $border-bottom-color - color to shade
 @mixin btn-box-shadow($border-bottom-color: $btn-default-bg) {
-  box-shadow: 0 -($btn-box-shadow-width) 0 shade($border-bottom-color, $btn-border-shade) inset;
+  box-shadow: 0 -1*($btn-box-shadow-width) 0 shade($border-bottom-color, $btn-border-shade) inset;
 }
 
 //
