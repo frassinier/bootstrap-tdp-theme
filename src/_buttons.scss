@@ -1,54 +1,47 @@
 // TODO report to bootstrap-tlnd-theme
-
-// Bootstrap
-$btn-font-weight: 300;
-
-// Talend override
-$btn-border-width: 3px;
+$btn-border-shade: 20 !default;
+$btn-box-shadow-width: 3px !default;
 
 .btn {
+  padding: 15px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: .6px;
   text-transform: uppercase;
-  border-bottom: $btn-border-width solid;
-
-  &-link {
-    border-bottom: 0;
-  }
+  border: 0;
 }
 
-// Talend data-prep
-$btn-border-shade: 20;
 
-/// Set bottom border color to a button
+/// Set box shadow to a button
 /// @access public
 /// @param {Color} $border-bottom-color - color to shade
-/// @return {Color}
-@function btn-border-bottom($border-bottom-color: $btn-default-bg) {
-  @return shade($border-bottom-color, $btn-border-shade);
+@mixin btn-box-shadow($border-bottom-color: $btn-default-bg) {
+  box-shadow: 0 -($btn-box-shadow-width) 0 shade($border-bottom-color, $btn-border-shade) inset;
 }
 
 //
 // Buttons
 // --------------------------------------------------
 .btn {
-  border-bottom-color: btn-border-bottom();
+  @include btn-box-shadow;
 
   &-primary {
-    border-bottom-color: btn-border-bottom($btn-primary-bg);
+    @include btn-box-shadow($btn-primary-bg);
   }
 
   &-success {
-    border-bottom-color: btn-border-bottom($btn-success-bg);
+    @include btn-box-shadow($btn-success-bg);
   }
 
   &-info {
-    border-bottom-color: btn-border-bottom($btn-info-bg);
+    @include btn-box-shadow($btn-info-bg);
   }
 
   &-warning {
-    border-bottom-color: btn-border-bottom($btn-warning-bg);
+    @include btn-box-shadow($btn-warning-bg);
   }
 
   &-danger {
-    border-bottom-color: btn-border-bottom($btn-danger-bg);
+    @include btn-box-shadow($btn-danger-bg);
   }
 }
