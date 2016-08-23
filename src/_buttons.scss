@@ -14,8 +14,6 @@ $btn-box-shadow-width: 3px !default;
 // --------------------------------------------------
 .btn {
   @include btn-box-shadow;
-  font-size: 12px;
-  line-height: 1;
   letter-spacing: .6px;
   text-transform: uppercase;
 
