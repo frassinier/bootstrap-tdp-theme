@@ -2,12 +2,8 @@
 
 @import 'utils';
 @import 'colors';
-
-$font-family-sans-serif: 'Source Sans Pro', sans-serif;
-
-@import 'navbar';
+@import 'variables';
 
 @import '../node_modules/bootstrap-tlnd-theme/src/theme/bootstrap';
 
 @import 'buttons';
-

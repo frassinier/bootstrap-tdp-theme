@@ -1,21 +1,12 @@
 // TODO report to bootstrap-tlnd-theme
-$btn-border-shade: 20 !default;
+$btn-box-shadow-color: 20 !default;
 $btn-box-shadow-width: 3px !default;
-
-.btn {
-  padding: 15px;
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: .6px;
-  text-transform: uppercase;
-  border: 0;
-}
 
 /// Set box shadow to a button
 /// @access public
 /// @param {Color} $border-bottom-color - color to shade
-@mixin btn-box-shadow($border-bottom-color: $btn-default-bg) {
-  box-shadow: 0 -1*($btn-box-shadow-width) 0 shade($border-bottom-color, $btn-border-shade) inset;
+@mixin btn-box-shadow($btn-bg: $btn-default-bg) {
+  box-shadow: 0 -1*($btn-box-shadow-width) 0 shade($btn-bg, $btn-box-shadow-color) inset;
 }
 
 //
@@ -23,6 +14,18 @@ $btn-box-shadow-width: 3px !default;
 // --------------------------------------------------
 .btn {
   @include btn-box-shadow;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+
+  &-primary,
+  &-success,
+  &-info,
+  &-warning,
+  &-danger {
+    border: 0;
+  }
 
   &-primary {
     @include btn-box-shadow($btn-primary-bg);
@@ -42,5 +45,9 @@ $btn-box-shadow-width: 3px !default;
 
   &-danger {
     @include btn-box-shadow($btn-danger-bg);
+  }
+
+  &-link {
+    box-shadow: none;
   }
 }
