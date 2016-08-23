@@ -1,0 +1,27 @@
+{
+  "name": "bootstrap-tdp-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./node_modules/bootstrap-tlnd-theme/example/index.html.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dashboard -p 3001 -c cyan -- webpack-dev-server --port 1337"
+  },
+  "author": "talend",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bootstrap-tlnd-theme": "github:talend/bootstrap-theme"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^3.8.0",
+    "path": "^0.12.7",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dashboard": "^0.1.6",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

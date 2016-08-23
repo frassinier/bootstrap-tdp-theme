@@ -1,0 +1,54 @@
+// TODO report to bootstrap-tlnd-theme
+
+// Bootstrap
+$btn-font-weight: 300;
+
+// Talend override
+$btn-border-width: 3px;
+
+.btn {
+  text-transform: uppercase;
+  border-bottom: $btn-border-width solid;
+
+  &-link {
+    border-bottom: 0;
+  }
+}
+
+// Talend data-prep
+$btn-border-shade: 20;
+
+/// Set bottom border color to a button
+/// @access public
+/// @param {Color} $border-bottom-color - color to shade
+/// @return {Color}
+@function btn-border-bottom($border-bottom-color: $btn-default-bg) {
+  @return shade($border-bottom-color, $btn-border-shade);
+}
+
+//
+// Buttons
+// --------------------------------------------------
+.btn {
+  border-bottom-color: btn-border-bottom();
+
+  &-primary {
+    border-bottom-color: btn-border-bottom($btn-primary-bg);
+  }
+
+  &-success {
+    border-bottom-color: btn-border-bottom($btn-success-bg);
+  }
+
+  &-info {
+    border-bottom-color: btn-border-bottom($btn-info-bg);
+  }
+
+  &-warning {
+    border-bottom-color: btn-border-bottom($btn-warning-bg);
+  }
+
+  &-danger {
+    border-bottom-color: btn-border-bottom($btn-danger-bg);
+  }
+}
