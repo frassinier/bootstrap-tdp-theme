@@ -5,7 +5,7 @@
   "main": "./node_modules/bootstrap-tlnd-theme/example/index.html.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dashboard -p 3001 -c cyan -- webpack-dev-server --port 1337"
+    "start": "webpack-dev-server --port 1337"
   },
   "author": "talend",
   "license": "Apache-2.0",
