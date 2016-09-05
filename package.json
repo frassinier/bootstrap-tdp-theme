@@ -5,7 +5,8 @@
   "main": "./node_modules/bootstrap-tlnd-theme/example/index.html.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --port 1337"
+    "start": "webpack-dev-server --port 1337",
+    "build": "webpack"
   },
   "author": "talend",
   "license": "Apache-2.0",
