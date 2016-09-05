@@ -1,5 +1,4 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const extractBootstrap = new ExtractTextPlugin('bootstrap.css', {
     allChunks: true,
@@ -26,10 +25,7 @@ const BASE_CONF = {
     sassLoader: {
         includePaths: [THEME_PATH, BOOT_PATH],
     },
-    plugins: [
-        extractBootstrap,
-        new DashboardPlugin(),
-    ],
+    plugins: [extractBootstrap],
     devServer: {
         contentBase: './node_modules/bootstrap-tlnd-theme/example',
     },
